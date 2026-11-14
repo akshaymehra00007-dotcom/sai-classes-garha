@@ -74,3 +74,32 @@ if (!prefersReducedMotion && window.matchMedia('(pointer: fine)').matches) {
 
 const year = document.querySelector('#year');
 if (year) year.textContent = String(new Date().getFullYear());
+
+const enquiryForm = document.querySelector('#whatsapp-enquiry');
+const enquiryName = document.querySelector('#enquiry-name');
+const enquiryCourse = document.querySelector('#enquiry-course');
+const whatsappMessage = document.querySelector('#whatsapp-message');
+const enquiryNote = document.querySelector('#enquiry-note');
+
+enquiryForm?.addEventListener('submit', () => {
+  const name = enquiryName?.value.trim() || '';
+  const course = enquiryCourse?.value.trim() || '';
+  if (whatsappMessage) {
+    whatsappMessage.value = `Namaste, my name is ${name}. I’d like to enquire about ${course} at SAI CLASSES GARHA.`;
+  }
+  if (enquiryNote) {
+    enquiryNote.textContent = 'Your message is ready in WhatsApp. Review it there and tap send when you’re ready.';
+    enquiryNote.setAttribute('role', 'status');
+    enquiryNote.setAttribute('aria-live', 'polite');
+  }
+});
+
+const mobileWhatsApp = document.querySelector('.mobile-whatsapp');
+const contactSection = document.querySelector('.contact-section');
+if (mobileWhatsApp && contactSection && 'IntersectionObserver' in window) {
+  const contactObserver = new IntersectionObserver(([entry]) => {
+    mobileWhatsApp.classList.toggle('is-hidden', entry.isIntersecting);
+  }, { threshold: 0.08 });
+  contactObserver.observe(contactSection);
+}
+
