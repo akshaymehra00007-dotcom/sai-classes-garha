@@ -1,6 +1,3 @@
-Warning: truncated output (original token count: 10204)
-Total output lines: 443
-
 :root {
   --paper: #f7f5ed;
   --paper-warm: #f0eee4;
@@ -160,7 +157,54 @@ img { display: block; max-width: 100%; }
 .teacher-art-spark { position: absolute; top: 5%; right: 5%; color: var(--lime); font-size: 39px; animation: sun-turn 24s linear infinite; }
 .teacher-copy .eyebrow { color: var(--lime); }
 .teacher-copy h2 { font-size: clamp(46px, 5.4vw, 68px); color: var(--paper); }
-.teacher-copy h2 em { color: var(-…1204 tokens truncated….contact-inner h2 em { color: var(--lime); }
+.teacher-copy h2 em { color: var(--lime); }
+.teacher-lede { max-width: 420px; margin: 26px 0 30px; color: rgba(247,245,237,.71); font-size: 14px; line-height: 1.8; }
+.teacher-signoff { display: flex; align-items: center; gap: 12px; margin-bottom: 24px; }
+.signoff-mark { display: grid; place-items: center; width: 42px; height: 42px; color: var(--ink); background: #f2b49b; border-radius: 50%; font-family: var(--serif); font-size: 23px; font-style: italic; }
+.teacher-signoff strong, .teacher-signoff small { display: block; }
+.teacher-signoff strong { font-size: 12px; }
+.teacher-signoff small { margin-top: 2px; color: rgba(247,245,237,.57); font-size: 10px; }
+.teacher-link { color: var(--lime); }
+.teacher-link:hover { color: white; }
+
+.review-section { position: relative; display: grid; grid-template-columns: .9fr 1.1fr; align-items: center; gap: clamp(50px, 9vw, 126px); padding-block: 145px; overflow: hidden; }
+.review-heading .eyebrow { margin-bottom: 25px; }
+.review-heading h2 { font-size: clamp(44px, 5.6vw, 66px); }
+.review-content { position: relative; z-index: 1; padding: 33px 38px 29px; background: #eeece1; border-radius: 4px 80px 4px 4px; transform: rotate(1.2deg); }
+.review-content::before { position: absolute; content: "“"; top: -47px; right: 33px; color: rgba(229, 124, 98, .65); font-family: var(--serif); font-size: 126px; line-height: 1; }
+.review-top { display: flex; justify-content: space-between; align-items: center; padding-bottom: 17px; border-bottom: 1px solid var(--line); }
+.review-stars { color: #d98148; font-size: 14px; letter-spacing: .13em; }
+.review-source { color: #768078; font-size: 9px; font-weight: 700; letter-spacing: .14em; }
+.review-score { display: flex; align-items: baseline; gap: 7px; padding-top: 17px; color: var(--muted); font-size: 10px; }
+.review-score strong { color: var(--ink); font-family: var(--serif); font-size: 31px; font-weight: 400; line-height: 1; }
+.review-score i { display: block; width: 1px; height: 13px; margin: 0 6px; background: var(--line); }
+.review-content blockquote { position: relative; z-index: 1; margin: 21px 0 24px; color: var(--green-deep); font-family: var(--serif); font-size: clamp(21px, 2.4vw, 29px); line-height: 1.3; }
+.review-bottom { display: flex; justify-content: space-between; gap: 20px; padding-top: 17px; border-top: 1px solid var(--line); color: var(--muted); font-size: 10px; }
+.review-bottom a { display: inline-flex; flex-shrink: 0; gap: 5px; color: var(--green); font-weight: 700; }
+.review-bottom a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.review-orbit { position: absolute; top: 16%; right: -5%; display: flex; gap: 3px; color: rgba(229, 124, 98, .55); font-size: 21px; animation: drift-x 12s ease-in-out infinite alternate; }
+
+.faq-section { display: grid; grid-template-columns: .78fr 1.22fr; gap: clamp(54px, 10vw, 150px); padding-block: 48px 145px; }
+.faq-intro h2 { font-size: clamp(43px, 5vw, 62px); }
+.faq-intro > p:not(.eyebrow) { max-width: 300px; margin: 21px 0 20px; color: var(--muted); font-size: 13px; line-height: 1.75; }
+.faq-list { border-top: 1px solid var(--line); }
+.faq-item { border-bottom: 1px solid var(--line); }
+.faq-item summary { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 23px 0; cursor: pointer; color: var(--ink); font-size: 14px; font-weight: 600; list-style: none; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary:focus-visible { outline: 2px solid var(--coral); outline-offset: 5px; }
+.faq-plus { position: relative; display: block; flex: 0 0 28px; width: 28px; height: 28px; border: 1px solid rgba(33,78,66,.3); border-radius: 50%; transition: transform .25s ease, background .25s ease; }
+.faq-plus::before, .faq-plus::after { position: absolute; top: 50%; left: 50%; content: ""; width: 10px; height: 1px; background: var(--green); transform: translate(-50%,-50%); transition: transform .25s ease; }
+.faq-plus::after { transform: translate(-50%,-50%) rotate(90deg); }
+.faq-item[open] .faq-plus { background: var(--lime); transform: rotate(45deg); }
+.faq-item[open] .faq-plus::after { transform: translate(-50%,-50%) rotate(0); }
+.faq-item p { max-width: 490px; margin: -5px 35px 23px 0; color: var(--muted); font-size: 12px; line-height: 1.75; animation: faq-open .3s ease both; }
+.faq-item p a { color: var(--green); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+
+.contact-section { position: relative; overflow: hidden; color: var(--paper); background: var(--green); }
+.contact-inner { position: relative; z-index: 2; padding-block: 108px 100px; text-align: center; }
+.light-eyebrow { justify-content: center; color: var(--lime); }
+.contact-inner h2 { margin: 0; font-size: clamp(57px, 8vw, 98px); font-weight: 500; letter-spacing: -.075em; line-height: .93; }
+.contact-inner h2 em { color: var(--lime); }
 .contact-inner > p:not(.eyebrow) { margin: 24px 0 30px; color: rgba(247,245,237,.7); font-size: 14px; }
 .contact-actions { display: flex; align-items: center; justify-content: center; gap: 30px; }
 .enquiry-form { width: min(100%, 760px); margin: 0 auto 27px; padding: 18px 19px 12px; text-align: left; background: rgba(247,245,237,.08); border: 1px solid rgba(247,245,237,.18); border-radius: 18px 4px 18px 4px; }
