@@ -285,6 +285,10 @@ img { display: block; max-width: 100%; }
 
 :focus-visible { outline: 2px solid var(--coral); outline-offset: 4px; }
 
+@media (max-width: 1360px) {
+  .hero-side-note { right: 0; }
+}
+
 @media (max-width: 1000px) {
   .section-shell { width: min(100% - 64px, 900px); }
   .header-inner { width: calc(100% - 48px); gap: 22px; }
