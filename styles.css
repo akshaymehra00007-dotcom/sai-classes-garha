@@ -100,7 +100,7 @@ img { display: block; max-width: 100%; }
 .proof-sun { color: var(--coral); font-size: 25px; }
 .proof-screen svg, .proof-pin svg { width: 23px; height: 23px; }
 .proof-divider { width: 1px; height: 27px; background: var(--line); }
-.marquee { overflow: hidden; padding: 20px 0; color: var(--green); background: var(--lime); transform: rotate(-.5deg) scale(1.015); }
+.marquee { overflow: hidden; padding: 20px 0; color: var(--green); background: var(--lime); transform: rotate(-.5deg); }
 .marquee-track { display: flex; align-items: center; justify-content: space-around; gap: 42px; width: max-content; min-width: 200%; animation: marquee 30s linear infinite; white-space: nowrap; }
 .marquee-track span { font-family: var(--serif); font-size: clamp(20px, 2vw, 27px); font-style: italic; }
 .marquee-track b { color: var(--coral); font-size: 18px; }
