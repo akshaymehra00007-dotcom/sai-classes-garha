@@ -230,8 +230,22 @@
           <p class="eyebrow light-eyebrow"><span class="eyebrow-dot"></span> Your next step</p>
           <h2 id="contact-title">Let’s make<br /><em>it make sense.</em></h2>
           <p>Ask about the classes, find your way here, or simply say hello.</p>
+          <form class="enquiry-form" id="whatsapp-enquiry" action="https://wa.me/919691076049" method="get" target="_blank" rel="noopener" aria-label="WhatsApp course enquiry">
+            <input type="hidden" name="text" id="whatsapp-message" />
+            <div class="enquiry-fields">
+              <div class="enquiry-field">
+                <label for="enquiry-name">Your name</label>
+                <input id="enquiry-name" type="text" autocomplete="name" placeholder="What should we call you?" maxlength="80" required />
+              </div>
+              <div class="enquiry-field">
+                <label for="enquiry-course">Course or class</label>
+                <input id="enquiry-course" type="text" placeholder="What would you like to learn?" maxlength="100" required />
+              </div>
+              <button class="enquiry-submit" type="submit"><span>Continue on WhatsApp</span><span aria-hidden="true">↗</span></button>
+            </div>
+            <p class="enquiry-note" id="enquiry-note">WhatsApp opens with your message ready for you to review and send.</p>
+          </form>
           <div class="contact-actions">
-            <a class="button button-lime" href="https://wa.me/919691076049?text=Namaste%2C%20I%27d%20like%20to%20ask%20about%20SAI%20CLASSES%20GARHA." target="_blank" rel="noopener noreferrer"><span>Message on WhatsApp</span><span class="button-arrow" aria-hidden="true">↗</span></a>
             <a class="contact-phone" href="tel:+919691076049"><span class="phone-icon" aria-hidden="true">⌕</span><span><small>OR GIVE US A CALL</small><strong>096910 76049</strong></span></a>
           </div>
           <div class="contact-location-mini"><span class="mini-pin" aria-hidden="true">⌖</span><span>Near Royal School, Durga Mandir<br />Garha, Jabalpur · 482003</span></div>
@@ -267,6 +281,7 @@
       <div class="footer-bottom section-shell"><span>© <span id="year">2026</span> SAI Classes Garha</span><span>Made for curious minds in Jabalpur <b>✳</b></span></div>
     </footer>
 
-    <a class="mobile-whatsapp" href="https://wa.me/919691076049?text=Namaste%2C%20I%27d%20like%20to%20ask%20about%20SAI%20CLASSES%20GARHA." target="_blank" rel="noopener noreferrer"><span>WhatsApp SAI Classes</span><span aria-hidden="true">↗</span></a>
+    <a class="mobile-whatsapp" href="#enquiry-name" aria-label="Go to the WhatsApp enquiry form"><span>Quick enquiry</span><span aria-hidden="true">↗</span></a>
   </body>
 </html>
+
